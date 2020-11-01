@@ -15,24 +15,16 @@ function setup() {
      rect(size * i, size * j, size, size);
     }
   }
-  for(let k = 0; k < 8; k++){
-    for(let l = 0; l < 8;l++){
-     if(k % 2 == 1 && l % 2 == 0 || k % 2 == 0 && l % 2 == 1){
+  for(let k = 0; k <= 8; k++){
+    for(let l = 0; l <= 8;l++){
+     if((k % 2 == 1 && l % 2 == 0 || k % 2 == 0 && l % 2 == 1) && l <= 3 ){
        fill(288,0,0)
-       ellipse(k * size + size/2, l * size + size/2, 20)
-     }
-     else if (k % 2 == 1 && l == 5 || l == 6 || l == 7){
-       fill(0)
-       ellipse((k-1) * size + size/2, l * size + size/2, 20)
-     }
-     else if (k % 2 == 1 && l == 3 || l == 4){
-       fill(128)
-       ellipse((k-1) * size + size/2, l * size + size/2, 20)
-     }
-     }
-   }
-   fill(128)
-   ellipse(187.5,112.5,20)
-   fill(0)
-   ellipse(187.5,162.5,20)
+       ellipse(k * size - size/2, l * size - size/2, 20)
+      }
+      else if(( k % 2 == 1 && l % 2 == 0 || k % 2 == 0 && l % 2 == 1) && l > 5 && l <= 8 ){
+        fill(0)
+        ellipse(k * size - size/2 , l * size - size/2, 20)
+      }
+    }
+  }
 }
