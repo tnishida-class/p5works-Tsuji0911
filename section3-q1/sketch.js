@@ -15,4 +15,5 @@ function balloon(t){
   rect(0, 0, w + p * 2, h + p * 2);
   fill(255);
   text(t, p, h + p);
+
 }
