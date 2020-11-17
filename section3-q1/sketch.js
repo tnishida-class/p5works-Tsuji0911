@@ -3,17 +3,18 @@
 // 吹き出しにしっぽを付けてみよう
 function setup(){
   createCanvas(400, 400);
-  background(255);
-  balloon("I love keyakizaka46");
+  background(128);
+  balloon("プログラミング演習");
 }
 
 function balloon(t){
   let w = textWidth(t);
   let h = textAscent() + textDescent();
-  let p = 2;
+  let p = 9;
   fill(0);
-  rect(0, 0, w + p * 2, h + p * 2);
+  rect(150 ,150,w * 2,3 * h);
   fill(255);
-  text(t, p, h + p);
+  text(t, 175, 150 + 1.5 * h + h);
 
+  fill()
 }
